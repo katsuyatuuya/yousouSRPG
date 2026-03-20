@@ -16,6 +16,8 @@ export default defineConfig({
         background_color: "#181a20",
         display: "fullscreen",
         orientation: "landscape",
+        start_url: "/yousouSRPG/",
+        scope: "/yousouSRPG/",
         icons: [
           {
             src: "icon-192.png",
@@ -46,5 +48,5 @@ export default defineConfig({
       }
     }),
   ],
-  base: "./",
+  base: "/yousouSRPG/",
 });
