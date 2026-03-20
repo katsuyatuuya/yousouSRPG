@@ -30,8 +30,17 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,mp3}"],
-        runtimeCaching: []
+        globPatterns: ["**/*.{js,css,html}"],
+        runtimeCaching: [
+          {
+            urlPattern: /\.mp3$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "audio-cache",
+              expiration: { maxEntries: 5 }
+            }
+          }
+        ]
       }
     }),
   ],
